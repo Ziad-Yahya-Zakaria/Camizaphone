@@ -1,0 +1,49 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.camizaphone.app"
+    compileSdk = 34
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.camizaphone.app"
+        // ML Kit requires minimum SDK 21
+        minSdk = 21
+        targetSdk = 34
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+        multiDexEnabled = true
+    }
+
+    buildTypes {
+        release {
+            // Signing config for release builds
+            signingConfig = signingConfigs.debug
+            minifyEnabled = false
+            shrinkResources = false
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22"
+    // Multi-dex support for ML Kit
+    implementation "androidx.multidex:multidex:2.0.1"
+}

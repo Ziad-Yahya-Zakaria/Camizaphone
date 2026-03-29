@@ -1,0 +1,60 @@
+name: camizaphone
+description: "Camizaphone - Smart OCR Table Extraction App"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Camera
+  camera: ^0.11.1
+
+  # OCR - Offline Text Recognition
+  google_mlkit_text_recognition: ^0.14.0
+
+  # Image Cropping
+  image_cropper: ^9.0.0
+
+  # Image Picker (for gallery selection)
+  image_picker: ^1.1.2
+
+  # Excel File Generation
+  excel: ^4.0.6
+
+  # File System Paths
+  path_provider: ^2.1.5
+
+  # Runtime Permissions
+  permission_handler: ^11.3.1
+
+  # Native Share Sheet
+  share_plus: ^10.1.4
+
+  # Cupertino Icons
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # To use Cairo font locally, download from Google Fonts and uncomment:
+  # assets:
+  #   - assets/fonts/
+  #
+  # fonts:
+  #   - family: Cairo
+  #     fonts:
+  #       - asset: assets/fonts/Cairo-Regular.ttf
+  #       - asset: assets/fonts/Cairo-Bold.ttf
+  #         weight: 700
+  #       - asset: assets/fonts/Cairo-SemiBold.ttf
+  #         weight: 600
